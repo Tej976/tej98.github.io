@@ -4,136 +4,135 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tejaswini Nikam Portfolio</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #0f172a; color: white; padding-top: 80px; }
 
-  body { background: #020617; color: #E2E8F0; padding-top: 80px; }
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px 50px; background: #020617;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
 
-  header {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 20px 50px; background: #020617;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
+    header h1 { color: #38bdf8; }
 
-  header h1 { color: #3B82F6; }
+    nav a {
+      color: white; margin-left: 20px; text-decoration: none;
+      transition: 0.3s;
+    }
 
-  nav a {
-    color: #E2E8F0; margin-left: 20px; text-decoration: none;
-    transition: 0.3s;
-  }
+    nav a:hover { color: #38bdf8; }
 
-  nav a:hover { color: #60A5FA; }
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: left;
+      padding-left: 80px;
+    }
 
-  .hero {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: left;
-    padding-left: 80px;
-  }
+    .hero h2 {
+      font-size: 4rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    .hero span { color: #38bdf8; }
 
-  .hero h2 {
-    font-size: 4rem;
-    font-weight: bold;
-    line-height: 1.2;
-  }
+    .btn {
+      margin-top: 20px; padding: 10px 20px; background: #38bdf8;
+      border: none; color: black; cursor: pointer;
+      border-radius: 5px; transition: 0.3s;
+    }
 
-  .hero span { color: #3B82F6; }
+    .btn:hover { background: white; }
 
-  .btn {
-    margin-top: 20px; padding: 10px 20px; background: #3B82F6;
-    border: none; color: white; cursor: pointer;
-    border-radius: 5px; transition: 0.3s;
-  }
+    section { padding: 50px; }
 
-  .btn:hover { background: #60A5FA; }
+    #contact {
+      text-align: center;
+      background: #020617;
+    }
 
-  section { padding: 50px; background: #0F172A; }
+    #contact h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    
+    #contact h2 {
+      margin-bottom: 30px;
+    }
 
-  #contact {
-    text-align: center;
-    background: #020617;
-  }
+    .contact-subtext {
+      color: #94a3b8;
+      margin-bottom: 60px; 
+    }
 
-  #contact h2 {
-    font-size: 3rem;
-    margin-bottom: 30px;
-  }
+    .contact-container {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
 
-  .contact-subtext {
-    color: #94A3B8;
-    margin-bottom: 60px; 
-  }
+    .contact-item {
+      text-align: center;
+    }
 
-  .contact-container {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-  }
+    .contact-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 15px;
+      border-radius: 50%;
+      background: #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: #fbbf24;
+      transition: 0.3s;
+    }
 
-  .contact-item {
-    text-align: center;
-  }
+    .contact-icon:hover {
+      transform: scale(1.1);
+      background: #334155;
+    }
 
-  .contact-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 15px;
-    border-radius: 50%;
-    background: #1E293B;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: #3B82F6;
-    transition: 0.3s;
-  }
+    .contact-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-  .contact-icon:hover {
-    transform: scale(1.1);
-    background: #334155;
-    color: #60A5FA;
-  }
+    .contact-text {
+      color: #cbd5f5;
+      font-size: 0.9rem;
+    }
 
-  .contact-title {
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+    .projects {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-  .contact-text {
-    color: #CBD5F5;
-    font-size: 0.9rem;
-  }
+    .card {
+      background: #1e293b; padding: 20px; border-radius: 10px;
+      transition: 0.3s;
+    }
 
-  .projects {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
+    .card:hover { transform: scale(1.05); }
 
-  .card {
-    background: #1E293B; padding: 20px; border-radius: 10px;
-    transition: 0.3s;
-  }
-
-  .card:hover { 
-    transform: scale(1.05);
-    background: #334155;
-  }
-
-  footer {
-    text-align: center; padding: 20px; background: #020617;
-  }
-</style>
+    footer {
+      text-align: center; padding: 20px; background: #020617;
+    }
+  </style>
 </head>
-  
 <body>
+
 <header>
   <h1>Tejaswini Nikam</h1>
   <nav>
@@ -229,4 +228,4 @@
 </script>
 
 </body>
-</html>
+</html>     
