@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tejaswini Nikam</title>
+  <title>My Portfolio</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background: #0f172a; color: white; padding-top: 80px; }
@@ -28,11 +28,20 @@
     nav a:hover { color: #38bdf8; }
 
     .hero {
-      height: 90vh; display: flex; justify-content: center; align-items: center;
-      flex-direction: column; text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: left;
+      padding-left: 80px;
     }
 
-    .hero h2 { font-size: 3rem; }
+    .hero h2 {
+      font-size: 4rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
     .hero span { color: #38bdf8; }
 
     .btn {
@@ -56,16 +65,22 @@
       margin-bottom: 10px;
     }
 
+    /* Add spacing below heading */
+    #contact h2 {
+      margin-bottom: 30px;
+    }
+
     .contact-subtext {
       color: #94a3b8;
-      margin-bottom: 40px;
+      margin-bottom: 60px; /* increased space */
     }
 
     .contact-container {
+      margin-top: 40px; /* added spacing between text and contact options */
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 40px;
-      margin-top: 100px;
+      margin-top: 40px;
     }
 
     .contact-item {
@@ -131,9 +146,17 @@
 </header>
 
 <div class="hero">
-  <h2>Hello, I'm <span>Tejaswini Nikam</span></h2>
-  <p>Java Developer | Backend Learner</p>
-  <button class="btn" onclick="scrollToProjects()">View Projects</button>
+  <p style="color:#38bdf8; letter-spacing:2px;">HELLO!</p>
+  <h2>I'm <span>Tejaswini</span></h2>
+  <h2><span>NIkam</span></h2>
+
+  <h3 style="margin-top:20px; font-size:1.8rem;">Java Developer</h3>
+  <p style="margin-top:10px; font-size:1.2rem;">A Software Developer</p>
+
+  <div style="margin-top:30px;">
+    <a href="#" class="btn">LinkedIn</a>
+    <a href="#projects" class="btn" style="background:transparent; color:white; border:1px solid #38bdf8; margin-left:10px;">My Works</a>
+  </div>
 </div>
 
 <section id="about">
@@ -155,7 +178,6 @@
   </div>
 </section>
 
-
 <section id="contact">
   <h2>Contact Me</h2>
   <p class="contact-subtext">Below are the details to reach out to me!</p>
@@ -166,23 +188,23 @@
       <a href="https://www.google.com/maps?q=Pune,India" target="_blank" style="text-decoration:none; color:inherit;">
         <div class="contact-icon">📍</div>
         <div class="contact-title">ADDRESS</div>
-        <div class="contact-text">413304, Pandharpur, India</div>
+        <div class="contact-text">Pune, India</div>
       </a>
     </div>
 
     <div class="contact-item">
-      <a href="tel:+919834045035" style="text-decoration:none; color:inherit;">
+      <a href="tel:+919607746440" style="text-decoration:none; color:inherit;">
         <div class="contact-icon">📞</div>
         <div class="contact-title">CONTACT NUMBER</div>
-        <div class="contact-text">+91 9834045035</div>
+        <div class="contact-text">+91 9607746440</div>
       </a>
     </div>
 
     <div class="contact-item">
-      <a href="mailto:nikamtejaswini64@gmail.com" style="text-decoration:none; color:inherit;">
+      <a href="mailto:your@email.com" style="text-decoration:none; color:inherit;">
         <div class="contact-icon">✉️</div>
         <div class="contact-title">EMAIL ADDRESS</div>
-        <div class="contact-text">nikamtejaswini64@gmail.com</div>
+        <div class="contact-text">your@email.com</div>
       </a>
     </div>
 
@@ -196,6 +218,7 @@
 
   </div>
 </section>
+
 <footer>
   <p>© 2026 My Portfolio</p>
 </footer>
